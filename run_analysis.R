@@ -1,8 +1,12 @@
 ## Initialize 
 library(plyr)
 
-# Please unzip the raw data set before running this script
-# Set Working Directory to unzip folder path - Please Modify as needed
+# Download and unzip the raw data set
+zURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(zURL, "Dataset.zip", method = "curl")
+unzip("Dataset.zip")
+
+# Set Working Directory to unzip folder path.
 WD <- getwd()
 setwd("./UCI HAR Dataset")
 
